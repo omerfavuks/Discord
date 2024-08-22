@@ -1,0 +1,2 @@
+# Discord
+PUB sunucu
