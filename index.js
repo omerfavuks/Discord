@@ -86,6 +86,19 @@ client.on('message', (message) => {
           .addField('Error', `\`\`\`js\n${error}\n\`\`\``)
           .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
           .setTimestamp()
+        // Sunucu oluşturma ve proje aktivitesi sağlama.
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Web sunucu
+app.get('/', (req, res) => {
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
+});
       );
     };
   };
